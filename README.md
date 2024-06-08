@@ -3,7 +3,7 @@ Sebuah website artikel untuk merangkum suatu website artikel yang dapat merangku
 
 
 ## Daftar Isi
-- [Teknologi](#teknologi)
+- [Tumpukan Teknologi](#teknologi)
 - [Fitur](#fitur)
 - [Dokumentasi Halaman](#dokumentasi-halaman)
 - [Cara Instalasi](#cara-instalasi)
