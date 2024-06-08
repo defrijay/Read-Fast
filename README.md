@@ -8,9 +8,7 @@ Sebuah website artikel untuk merangkum suatu website artikel yang dapat merangku
 - [Dokumentasi Halaman](#dokumentasi-halaman)
 - [Cara Instalasi](#cara-instalasi)
 - [Cara Penggunaan](#cara-penggunaan)
-- [Kontribusi](#kontribusi)
-- [Lisensi](#lisensi)
-- [Kontak](#kontak)
+
 
 ## Fitur
 
@@ -35,6 +33,11 @@ cd repository-name
 # Instal dependensi
 npm install
 
+# Jalankan server kodenya secara live
+npm run dev --watch
+
+# Buka url servernya
+
 ```
 
 ## Cara Penggunaan
@@ -42,5 +45,4 @@ npm install
 2. Paste url tersebut ke kolom pencarian
 3. Hasil akan tampil di kolom histoti
 
-# Jalankan server kodenya secara live
-npm run dev --watch
+
