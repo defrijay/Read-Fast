@@ -1,8 +1,37 @@
-# React + Vite
+# Summarify
+Sebuah website artikel untuk merangkum suatu website artikel yang dapat merangkum isi secara umum webiste artikel tersebut
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Daftar Isi
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Fitur](#fitur)
+- [Tangkapan Layar](#tangkapan-layar)
+- [Cara Instalasi](#cara-instalasi)
+- [Cara Penggunaan](#cara-penggunaan)
+- [Kontribusi](#kontribusi)
+- [Lisensi](#lisensi)
+- [Kontak](#kontak)
+
+## Fitur
+
+- Merangkum Website Artikel : Merangkum isi keseluruhan isi website artikel agar menghemat waktu dengan tahu isinya secara umum.
+- Menampilkan Hisotri Pencarian : Menampilkan histori pencarian agar dapat melihat kembali isi webiste yang telah dicari
+- Menghapus Histori Pencarian : Menghapus histori pencarian agar dapat melihat histori yang diinginkan saja
+
+## Tangkapan Layar
+
+![Tangkapan Layar 1](Dokumentasi.png)
+
+## Cara Instalasi
+
+Instruksi langkah demi langkah untuk menginstal proyek Anda secara lokal.
+
+```bash
+# Clone repository ini
+git clone https://github.com/username/repository-name.git
+
+# Masuk ke direktori proyek
+cd repository-name
+
+# Instal dependensi
+npm install
