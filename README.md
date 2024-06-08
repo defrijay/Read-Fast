@@ -37,6 +37,7 @@ npm install
 npm run dev --watch
 
 # Buka url servernya
+http://localhost:5173/
 
 ```
 
