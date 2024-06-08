@@ -5,7 +5,7 @@ Sebuah website artikel untuk merangkum suatu website artikel yang dapat merangku
 ## Daftar Isi
 
 - [Fitur](#fitur)
-- [Tangkapan Layar](#tangkapan-layar)
+- [Dokumentasi Halaman](#tdokumentasi-halaman)
 - [Cara Instalasi](#cara-instalasi)
 - [Cara Penggunaan](#cara-penggunaan)
 - [Kontribusi](#kontribusi)
@@ -18,9 +18,8 @@ Sebuah website artikel untuk merangkum suatu website artikel yang dapat merangku
 - Menampilkan Hisotri Pencarian : Menampilkan histori pencarian agar dapat melihat kembali isi webiste yang telah dicari
 - Menghapus Histori Pencarian : Menghapus histori pencarian agar dapat melihat histori yang diinginkan saja
 
-## Tangkapan Layar
-
-![Tangkapan Layar 1](Dokumentasi.png)
+## Dokumentasi Halaman
+![Dokumentasi Halaman Keseluruhan](Dokumentasi.png)
 
 ## Cara Instalasi
 
@@ -35,3 +34,6 @@ cd repository-name
 
 # Instal dependensi
 npm install
+
+# Jalankan server kodenya secara live
+npm run dev --watch
