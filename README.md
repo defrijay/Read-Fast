@@ -5,7 +5,7 @@ Sebuah website artikel untuk merangkum suatu website artikel yang dapat merangku
 ## Daftar Isi
 
 - [Fitur](#fitur)
-- [Dokumentasi Halaman](#tdokumentasi-halaman)
+- [Dokumentasi Halaman](#dokumentasi-halaman)
 - [Cara Instalasi](#cara-instalasi)
 - [Cara Penggunaan](#cara-penggunaan)
 - [Kontribusi](#kontribusi)
@@ -19,7 +19,7 @@ Sebuah website artikel untuk merangkum suatu website artikel yang dapat merangku
 - Menghapus Histori Pencarian : Menghapus histori pencarian agar dapat melihat histori yang diinginkan saja
 
 ## Dokumentasi Halaman
-![Dokumentasi Halaman Keseluruhan](Dokumentasi.png)
+![Dokumentasi Halaman](Dokumentasi.png)
 
 ## Cara Instalasi
 
