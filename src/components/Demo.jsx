@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 
-import { copy, linkIcon, loader, tick } from "../assets";
-import { useLazyGetSummaryQuery } from "../services/article";
+import { copy, linkIcon, loader, tick, trash } from "../assets"; // Importing images and icons from the assets folder
+import { useLazyGetSummaryQuery } from "../services/article"; // Importing query function from article service
 
 const Demo = () => {
   const [article, setArticle] = useState({
     url: "",
     summary: "",
   });
-  const [allArticles, setAllArticles] = useState([]);
-  const [copied, setCopied] = useState("");
+  const [allArticles, setAllArticles] = useState([]); // State to store all articles from localStorage
+  const [copied, setCopied] = useState(""); // State to mark whether URL has been copied
 
   // RTK lazy query
-  const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
+  const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery(); // Using RTK query lazily
 
   // Load data from localStorage on mount
   useEffect(() => {
@@ -21,7 +21,7 @@ const Demo = () => {
     );
 
     if (articlesFromLocalStorage) {
-      setAllArticles(articlesFromLocalStorage);
+      setAllArticles(articlesFromLocalStorage); // Setting allArticles state from data in localStorage
     }
   }, []);
 
@@ -32,36 +32,42 @@ const Demo = () => {
       (item) => item.url === article.url
     );
 
-    if (existingArticle) return setArticle(existingArticle);
+    if (existingArticle) return setArticle(existingArticle); // If article already exists in history, display that article
 
-    const { data } = await getSummary({ articleUrl: article.url });
+    const { data } = await getSummary({ articleUrl: article.url }); // Fetching summary of article using RTK query
     if (data?.summary) {
       const newArticle = { ...article, summary: data.summary };
       const updatedAllArticles = [newArticle, ...allArticles];
 
       // update state and local storage
-      setArticle(newArticle);
-      setAllArticles(updatedAllArticles);
-      localStorage.setItem("articles", JSON.stringify(updatedAllArticles));
+      setArticle(newArticle); // Saving newly queried article to state
+      setAllArticles(updatedAllArticles); // Adding new article to list of all articles
+      localStorage.setItem("articles", JSON.stringify(updatedAllArticles)); // Saving all articles to localStorage
     }
   };
 
   // copy the url and toggle the icon for user feedback
   const handleCopy = (copyUrl) => {
     setCopied(copyUrl);
-    navigator.clipboard.writeText(copyUrl);
-    setTimeout(() => setCopied(false), 3000);
+    navigator.clipboard.writeText(copyUrl); // Copying URL to clipboard
+    setTimeout(() => setCopied(false), 3000); // After 3 seconds, revert copied to false
+  };
+
+  const handleDelete = (deletedUrl) => {
+    const updatedArticles = allArticles.filter((item) => item.url !== deletedUrl); // Deleting article from list of all articles
+    setAllArticles(updatedArticles); // Updating list of all articles after deletion
+    localStorage.setItem("articles", JSON.stringify(updatedArticles)); // Updating localStorage after deleting article
   };
 
   const handleKeyDown = (e) => {
     if (e.keyCode === 13) {
-      handleSubmit(e);
+      handleSubmit(e); // Handle form submit when enter key is pressed
     }
   };
 
   return (
     <section className='mt-16 w-full max-w-xl'>
-      {/* Search */}
+      {/* Search form */}
       <div className='flex flex-col w-full gap-2'>
         <form
           className='relative flex justify-center items-center'
@@ -80,7 +86,7 @@ const Demo = () => {
             onChange={(e) => setArticle({ ...article, url: e.target.value })}
             onKeyDown={handleKeyDown}
             required
-            className='url_input peer' // When you need to style an element based on the state of a sibling element, mark the sibling with the peer class, and use peer-* modifiers to style the target element
+            className='url_input peer' 
           />
           <button
             type='submit'
@@ -95,12 +101,12 @@ const Demo = () => {
           {allArticles.reverse().map((item, index) => (
             <div
               key={`link-${index}`}
-              onClick={() => setArticle(item)}
+              onClick={() => setArticle(item)} // Display article when clicked from list of all articles
               className='link_card'
             >
               <div className='copy_btn' onClick={() => handleCopy(item.url)}>
                 <img
-                  src={copied === item.url ? tick : copy}
+                  src={copied === item.url ? tick : copy} // Change copy icon to tick icon when URL is copied
                   alt={copied === item.url ? "tick_icon" : "copy_icon"}
                   className='w-[40%] h-[40%] object-contain'
                 />
@@ -108,6 +114,16 @@ const Demo = () => {
               <p className='flex-1 font-satoshi text-blue-700 font-medium text-sm truncate'>
                 {item.url}
               </p>
+              {/* Trash icon for deleting history item */}
+              <img
+                src={trash}
+                alt='trash-icon'
+                className='w-5 cursor-pointer'
+                onClick={(e) => {
+                  e.stopPropagation(); // Avoid triggering parent onClick
+                  handleDelete(item.url); // Delete item from history
+                }}
+              />
             </div>
           ))}
         </div>
