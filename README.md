@@ -35,5 +35,12 @@ cd repository-name
 # Instal dependensi
 npm install
 
+```
+
+## Cara Penggunaan
+1. Cari website artikel dengan contoh link url ini ```https://en.wikipedia.org/wiki/Avatar:_The_Last_Airbender```
+2. Paste url tersebut ke kolom pencarian
+3. Hasil akan tampil di kolom histoti
+
 # Jalankan server kodenya secara live
 npm run dev --watch
