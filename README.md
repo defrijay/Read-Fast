@@ -3,15 +3,19 @@ Sebuah website artikel untuk merangkum suatu website artikel yang dapat merangku
 
 
 ## Daftar Isi
-
+- [Teknologi](#teknologi)
 - [Fitur](#fitur)
 - [Dokumentasi Halaman](#dokumentasi-halaman)
 - [Cara Instalasi](#cara-instalasi)
 - [Cara Penggunaan](#cara-penggunaan)
 
+## Tumpukan Teknologi
+- **ReactJS**: Perpustakaan UI untuk membangun antarmuka pengguna
+- **Tailwind CSS**: Kerangka kerja CSS berbasis utilitas
+- **Vite**: Alat pengembangan front-end generasi berikutnya untuk pengembangan yang lebih cepat
+- **Redux**: Library manajemen state untuk aplikasi front-end yang kompleks
 
 ## Fitur
-
 - Merangkum Website Artikel : Merangkum isi keseluruhan isi website artikel agar menghemat waktu dengan tahu isinya secara umum.
 - Menampilkan Hisotri Pencarian : Menampilkan histori pencarian agar dapat melihat kembali isi webiste yang telah dicari
 - Menghapus Histori Pencarian : Menghapus histori pencarian agar dapat melihat histori yang diinginkan saja
@@ -20,7 +24,6 @@ Sebuah website artikel untuk merangkum suatu website artikel yang dapat merangku
 ![Dokumentasi Halaman](Dokumentasi.png)
 
 ## Cara Instalasi
-
 Instruksi langkah demi langkah untuk menginstal proyek Anda secara lokal.
 
 ```bash
