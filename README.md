@@ -10,6 +10,7 @@ Sebuah website artikel untuk merangkum suatu website artikel yang dapat merangku
 - [Cara Penggunaan](#cara-penggunaan)
 
 ## Tumpukan Teknologi
+### Frontend
 - **ReactJS**: Perpustakaan UI untuk membangun antarmuka pengguna
 - **Tailwind CSS**: Kerangka kerja CSS berbasis utilitas
 - **Vite**: Alat pengembangan front-end generasi berikutnya untuk pengembangan yang lebih cepat
